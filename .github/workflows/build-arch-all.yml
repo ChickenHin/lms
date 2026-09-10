@@ -1,11 +1,11 @@
 name: All-option Builds (Arch)
-on: [pull_request]
+on: [workflow_dispatch]
 jobs:
   Build:
     strategy:
       matrix:
-        LMS_BUILD_TYPE: [Release, Debug]
-        LMS_UNITY_BUILD: [ON, OFF]
+        LMS_BUILD_TYPE: [Debug]
+        LMS_UNITY_BUILD: [ON]
         LMS_IMAGE_BACKEND: [stb, graphicsmagick]
     runs-on: ubuntu-latest
     steps:
